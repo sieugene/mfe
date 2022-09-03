@@ -1,15 +1,10 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import { Button } from 'ui';
-
+import { AppShell } from "ui";
 
 function App() {
-  return (
-    <div className="App">
-      <Button />
-    </div>
-  );
+  return <AppShell title="Movies" colorScheme="dark" />;
 }
 
 export default App;

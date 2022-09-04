@@ -1,5 +1,5 @@
 {
-  "name": "ui",
+  "name": "store",
   "version": "0.0.0",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -16,13 +16,9 @@
     "eslint-config-custom": "*",
     "react": "^18.2.0",
     "tsconfig": "*",
-    "typescript": "^4.5.2",
-    "store": "*"
+    "typescript": "^4.5.2"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.4",
-    "@mantine/core": "^5.2.5",
-    "@mantine/hooks": "^5.2.5",
-    "react-router-dom": "^6.3.0"
+    "zustand": "^4.1.1"
   }
 }

@@ -5,6 +5,7 @@ import {
   MantineTheme,
   Navbar,
   Title,
+  Text,
 } from "@mantine/core";
 import * as React from "react";
 import {
@@ -16,6 +17,8 @@ import {
 } from "react-router-dom";
 import { MainLink, NavLink } from "./MainLink";
 
+import { useStore } from "store";
+
 export type Route = Pick<PathRouteProps, "path" | "element">;
 
 export const AppShell: React.FC<
@@ -23,6 +26,7 @@ export const AppShell: React.FC<
     Pick<MantineTheme, "colorScheme">
   >
 > = ({ title, routes, colorScheme = "light", navLinks }) => {
+  const { movies } = useStore();
   return (
     <BrowserRouter>
       <MantineProvider
@@ -41,7 +45,8 @@ export const AppShell: React.FC<
           }
           header={
             <Header height={60} p="xs" sx={{ display: "flex" }}>
-              <Title>{title}</Title>
+              <Title style={{ flexGrow: 1 }}>{title}</Title>
+              <Text size="xl">{movies.length} selected</Text>
             </Header>
           }
           styles={(theme) => ({

@@ -19,6 +19,7 @@
     "tsconfig": "*",
     "typescript": "^4.8.2",
     "ui": "*",
+    "card": "*",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

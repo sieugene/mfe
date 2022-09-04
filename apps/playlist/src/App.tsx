@@ -1,14 +1,14 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import { AppShell } from "ui";
+import { PlaylistContent } from "playlist-content";
 import { MOVIES_APP_ROUTES } from "shared/lib";
+import { AppShell } from "ui";
 import { MoviesContent } from "movies-content";
+import "./App.css";
 
 function App() {
   return (
     <AppShell
-      title="Movies"
+      title="Playlist"
+      colorScheme="dark"
       routes={[
         {
           path: MOVIES_APP_ROUTES.home,
@@ -16,7 +16,7 @@ function App() {
         },
         {
           path: MOVIES_APP_ROUTES.playlist,
-          element: <div>Playlist</div>,
+          element: <PlaylistContent />,
         },
       ]}
       navLinks={[

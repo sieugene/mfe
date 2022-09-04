@@ -1,5 +1,5 @@
 {
-  "name": "movies",
+  "name": "playlist",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,12 +19,14 @@
     "tsconfig": "*",
     "typescript": "^4.8.2",
     "ui": "*",
-    "card": "*",
+    "store": "*",
+    "playlist-content": "*",
     "movies-content": "*",
+    "card": "*",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "dev": "react-scripts start",
+    "dev": "set PORT=3001 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
